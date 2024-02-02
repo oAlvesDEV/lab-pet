@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./script.js" defer></script>
+        <script src="./radial.js" defer></script>
+    </head>
+    <body>
+        <div class="levelup-notify">
+            <div class="levelup-headerside">
+               <div class="levelup-headerside-text">LEVEL UP!</div>
+               <div class="levelup-headerside-level">1</div>
+            </div>
+            <div class="levelup-bottomside">Pet'in level atladı</div>
+         </div>
+        <div id="container">
+            <div id="buttons"></div>
+        </div>
+        <div class="pet-bg">
+            <div class="pet-img"></div>
+            <div class="pet-name">ISIM SOY ISIM FALAN</div>
+            <div class="pet-gender">M</div>
+            <div class="pet-genus"></div>
+            <div class="pet-level"></div>
+            <div class="pet-interacttext">Etkileşim için "E" basmalısın</div>
+        </div>
+        <div class="pet-boughtmenus">
+            <div class="pet-headerlist">
+                <div class="pet-headerlistbox" id="dog-list"><div class="pet-headerlistbox-img" id="dog-list-img"></div></div>
+                <div class="pet-headerlistbox" id="cat-list"><div class="pet-headerlistbox-img" id="cat-list-img"></div></div>
+                <div class="pet-headerlistbox" id="bird-list"><div class="pet-headerlistbox-img" id="bird-list-img"></div></div>
+            </div>
+            <div class="pet-boughtlist">
+                <div class="pet-boughtbox">
+                    <div class="pet-boughtbox-img"></div>
+                    <div class="pet-boughtbox-price">1500$</div>
+                    <div class="pet-boughtbox-name">KÖPKE</div>
+                    <div class="pet-boughtbox-label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quasi id ducimus harum unde dolor nesciunt, eos earum totam alias quam voluptates, reprehenderit possimus odit temporibus at quas quidem repudiandae?</div>
+                </div>
+            </div>
+            <div class="pet-info">
+                <div class="pet-info-petname"></div>
+                <div class="pet-info-gender"></div>
+                <div class="pet-info-level"></div>
+                <div class="pet-info-label"></div>
+                <div class="pet-status">
+                    <div class="pet-status-box">
+                        <div class="pet-status-name">HEALTH</div>
+                        <div class="pet-status-bar" id="health-bar"></div>
+                    </div>
+                    <div class="pet-status-box">
+                        <div class="pet-status-name">ENERGY</div>
+                        <div class="pet-status-bar" id="energy-bar"></div>
+                    </div>
+                    <div class="pet-status-box">
+                        <div class="pet-status-name">HUNGRY</div>
+                        <div class="pet-status-bar" id="hungry-bar"></div>
+                    </div>
+                    <div class="pet-status-box">
+                        <div class="pet-status-name">THRIST</div>
+                        <div class="pet-status-bar" id="thrist-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pet-buybox">BUY</div>
+        </div>
+        <div class="animate__animated animate__fadeOutRight" id="pet-interaction">
+            <div class="pet-interaction-petimg"></div>
+            <div class="pet-interaction-gender"></div>
+            <input type="text" name="" placeholder="ROTTI" id="pet-interaction-name">
+            <div class="animate__animated animate__zoomOut" id="pet-interaction-text-save">SAVE</div>
+            <div class="pet-interaction-bottom">
+                <div id="pet-interaction-status">
+                    <div class="pet-interaction-statusbox" style="margin-left: 26%;">
+                        <svg width="53" height="53" style="float:inline-start">
+                            <circle class="progress progress-health" stroke="#D4D4D4" stroke-width="2.6" style="stroke-opacity: 1;" fill="#ededef44" r="20" cx="25" cy="25" stroke-dasharray="80 30" stroke-dashoffset="0"/>
+                        </svg>
+                        <div class="pet-interaction-status-icon" style="background-image: url(./img/hearth.png)"></div>
+                    </div>
+                    <div class="pet-interaction-statusbox">
+                        <svg width="53" height="53" style="float:inline-start">
+                            <circle class="progress progress-hungry" stroke="#D4D4D4" stroke-width="2.6" style="stroke-opacity: 1;" fill="#ededef44" r="20" cx="25" cy="25" stroke-dasharray="80 30" stroke-dashoffset="0"/>
+                        </svg>
+                        <div class="pet-interaction-status-icon" style="background-image: url(./img/hungry.png)"></div>
+                    </div>
+                    <div class="pet-interaction-statusbox">
+                        <svg width="53" height="53" style="float:inline-start">
+                            <circle class="progress progress-thirst" stroke="#D4D4D4" stroke-width="2.6" style="stroke-opacity: 1;" fill="#ededef44" r="20" cx="25" cy="25" stroke-dasharray="80 30" stroke-dashoffset="0"/>
+                        </svg>
+                        <div class="pet-interaction-status-icon" style="background-image: url(./img/thirst.png)"></div>
+                    </div>
+                </div>
+                <div id="pet-interaction-order">
+                </div> 
+            </div>
+        </div>
+        <div class="animate__animated animate__zoomOut" id="pet-input-area">
+            <div class="pet-input-area-header">Pet Fotoğraf değiştirme</div>
+            <input type="text" name="" placeholder="" id="pet-input-area-text">
+            <div class="pet-input-area-btns">
+                <div class="pet-input-area-btn" id="confirm">CONFIRM</div>
+                <div class="pet-input-area-btn" id="decline">DECLINE</div>
+            </div>
+        </div>
+    </body>
+</html>

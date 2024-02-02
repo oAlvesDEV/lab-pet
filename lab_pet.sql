@@ -1,0 +1,29 @@
+CREATE TABLE `lab_pet` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`netID` INT(11) NULL DEFAULT NULL,
+	`petHash` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petTexureID` INT(11) NULL DEFAULT NULL,
+	`petLeash` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petLeashID` INT(11) NULL DEFAULT NULL,
+	`petOwner` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petGender` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petName` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petLabel` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`hungryDecrase` INT(11) NULL DEFAULT NULL,
+	`petHungryLevel` INT(11) NULL DEFAULT NULL,
+	`thirstDecrase` INT(11) NULL DEFAULT NULL,
+	`petThirstLevel` INT(11) NULL DEFAULT NULL,
+	`petEnergyLevel` INT(11) NULL DEFAULT NULL,
+	`petHealthLevel` INT(11) NULL DEFAULT NULL,
+	`petXP` INT(11) NULL DEFAULT NULL,
+	`lastXP` INT(11) NULL DEFAULT NULL,
+	`petLevel` INT(11) NULL DEFAULT NULL,
+	`petPosition` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`petIMG` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`listOf` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `netID` (`netID`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+;

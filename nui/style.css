@@ -1,0 +1,955 @@
+/* Nice font for button from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Montserrat';
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    opacity: 0%;
+    left: 50%;
+    top: 50%;
+    width:40px;
+    height:40px;
+    border: 5px solid #999999;
+    border-radius: 50%;
+}
+
+.pet-bg {
+    display: block;
+    position: absolute;
+    opacity: 0%;
+    left: 50%;
+    top: 50%;
+    width: 19%;
+    height: 9%;
+    background-image: url(./img/pet-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 1px solid white; */
+    transform: skewY(356deg);
+    /* box-shadow: #99fb22 8px -2px 14px; */
+    filter: drop-shadow(0 0 1.75rem #99fb2296);
+
+}
+
+.pet-img {
+    /* background: darkgray; */
+    height: 45%;
+    width: 12%;
+    border-radius: 50%;
+    float: left;
+    margin-top: 1.7vh;
+    margin-left: 3vh;
+    margin-right: 3%;
+    background-image: url(./unkownpet.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.pet-name {
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    font-weight: 500;
+    margin-top: 6%;
+    text-align: left;
+}
+
+.pet-gender{
+    font-size: .9vh;
+    float: left;
+    height: 21%;
+    text-align: justify;
+    width: 3%;
+}
+
+.pet-genus {
+    font-size: .9vh;
+    float: left;
+    height: 21%;
+    text-align: justify;
+    width: 40%;
+}
+
+.pet-level {
+    width: 12%;
+    height: 29%;
+    display: flex;
+    top: -28%;
+    position: relative;
+    left: 20%;
+    opacity: 0.5;
+    font-size: 1vh;
+}
+
+.pet-interacttext {
+    width: 100%;
+    height: 31%;
+    opacity: 0.8;
+    font-size: 1vh;
+    margin-top: 3%;
+    text-align: center;
+}
+  
+.key {
+    position:absolute;
+    width:40px;
+    height:40px;
+}
+  
+.key > p {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: #6c6c6c;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align:center;
+    line-height: 40px;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fadeIn {
+    animation: fade 2s ease-in 0s 1 normal;
+}
+
+.fadeOut {
+    animation: fade 2s ease-in 0s 1 reverse;
+}
+
+#container {
+    position: absolute;
+    height: auto;
+    border-radius: 5px;
+    background: transparent !important;
+    transform: perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+}
+
+#buttons {
+    max-height: 75vh;
+    width: 100%;
+    overflow-x: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+html,
+body {
+    background: transparent !important;
+}
+
+#buttons::-webkit-scrollbar {
+    display: block;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+}
+
+.button {
+    width: auto;
+    max-width: 100%;
+    height: 10%;
+    background: rgba(23, 23, 23, 55%);
+    color: white;
+    position: relative;
+    top: 10%;
+    margin-top: 0.05rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(23, 23, 23, 80%);
+}
+
+.title {
+    width: auto;
+    max-width: 100%;
+    height: 10%;
+    background: rgba(23, 23, 23, 90%);
+    color: white;
+    position: relative;
+    top: 10%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    padding: 0.45rem;
+    border-radius: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+}
+
+div > .text {
+    flex-direction: column;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+div > .header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: left;
+    overflow: wrap;
+    color: rgba(244, 213, 30, 90%);
+    font-size: 0.9rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+div > .header:hover  {
+    color: rgba(244, 233, 30, 100%);
+}
+
+.animation-openFromMiddle {
+    animation: anime 1.0s ease-in 0s 1
+}
+
+.animation-closeFromMiddle {
+    animation: animeClose 1.0s ease-in 0s 1
+}
+
+@keyframes anime {
+  from {
+    opacity: 0;
+    transform: scaleY(0.0) perspective(0cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1.0) perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animeClose {
+  from {
+    opacity: 1;
+    transform: scaleY(1.0) perspective(6cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0.0) perspective(0cm) rotateX(0deg) rotateY(355deg) rotateZ(0deg);
+  }
+}
+
+
+
+
+
+
+
+
+/*  bought Menus */
+
+.pet-boughtmenus {
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+.pet-headerlist {
+    width: 19%;
+    height: 9%;
+    display: flex;
+    overflow: hidden;
+    /* background-color: rgb(44, 44, 44); */
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 13%;
+}
+
+
+.pet-headerlistbox {
+    background-color: rgb(255 252 252 / 12%);
+    float: left;
+    margin-left: 4%;
+    width: 20%;
+    height: 76%;
+    margin-top: 3%;
+    border-radius: 8px;
+    border: 1px solid rgb(255 255 255 / 18%); 
+    transition: 1s all;
+}
+
+
+.pet-headerlistbox:hover {
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -ms-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    box-shadow: #99fb22 8px -2px 14px;
+    
+}
+
+.pet-headerlistbox:hover ~ .pet-headerlistbox-img {
+    fill: black;
+}
+
+.pet-headerlistbox-img {
+    background-image: url(./img/doghead_box.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 63%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#dog-list-img {
+    fill:#1e1e1e;
+    background-image: url(./img/doghead_box.png);
+}
+#cat-list-img {
+    fill:#1e1e1e;
+    background-image: url(./img/cathead_box.png);
+}
+#bird-list-img {
+    fill:#1e1e1e;
+    background-image: url(./img/birdhead_box.png);
+}
+
+.pet-boughtlist{
+    width: 22%;
+    height: 57%;
+    /* background: #f0f8ff08; */
+    position: absolute;
+    margin-left: 2%;
+    overflow: hidden;
+    margin-top: 19%;
+    overflow-y: scroll;
+}
+
+.pet-boughtlist::-webkit-scrollbar {
+    position: absolute;
+    width: 0vh;
+}
+
+.pet-boughtlist::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.pet-boughtlist::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.664);
+
+}
+
+.pet-boughtbox {
+    width: 80%;
+    height: 21%;
+    /* background: rgba(240, 248, 255, 0.267); */
+    background-image: u;
+    background: rgb(26, 26, 26);
+    background: linear-gradient(0deg, rgb(26, 26, 26) 0%, rgba(0,212,255,0) 100%);
+    background-image: url(./img/bg_box.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: px solid #ffffff69; */
+    overflow: hidden;
+    margin: 2% auto;
+}
+
+.pet-boughtbox:hover {
+    border: 1px solid #99fb22;
+    background: rgb(155,255,0);
+    background: linear-gradient(0deg, rgba(155,255,0,1) 0%, rgba(0,212,255,0) 100%);
+    background-image: url(./img/bg_boxhover.png);
+    background-position: center;
+    background-size: contain;
+}
+
+
+.pet-boughtbox-img {
+    width: 25%;
+    height: 65%;
+    float: left;
+    background-image: url(./img/doghead.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 50%;
+    margin-top: 8%;
+}
+
+
+.pet-boughtbox-price {
+    float: inline-end;
+    background: #99fb22;
+    color: black;
+    width: max-content;
+    padding: 0px 20px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+        margin-right: 4%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-style: italic;
+    font-size: 1.2vh;
+}
+
+
+.pet-boughtbox-name {
+    width: 45%;
+    float: left;
+    margin-top: 3%;
+    font-style: italic;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.pet-boughtbox-label{
+    font-size: 0.8vh;
+    height: 62%;
+    width: 65%;
+    color: aliceblue;
+    top: 4%;
+    display: flex;
+    float: inline-start;
+}
+
+
+.pet-info {
+    width: 29%;
+    height: 100%;
+    position: absolute;
+    /* background: rgba(80, 80, 80, 0.123); */
+    right: 0%;
+    opacity: 0;
+    transition: 1s all;
+}
+
+.pet-info-petname {
+    width: max-content;
+    font-size: 3vh;
+    font-weight: 100;
+    font-size: 4vh;
+    text-align: left;
+    width: max-content;
+    overflow: hidden;
+    height: 6%;
+    margin-top: 60%;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+
+.pet-info-gender{
+    width: 8%;
+    height: 5%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./img/M.png);
+    top: -10%;
+    left: 82%;
+    position: relative;
+    transform: rotate(13deg);
+}
+
+
+.pet-info-level {
+    color: white;
+    transform: rotate(16deg);
+    width: max-content;
+    max-width: 16%;
+    height: 3%;
+    position: relative;
+    top: -17%;
+    left: 82%;
+}
+
+.pet-info-label {
+    color: white;
+    width: 92%;
+    font-variant: traditional;
+    text-align: center;
+    height: max-content;
+}
+
+
+.pet-status {
+    width: 100%;
+    height: 43%;
+}
+
+.pet-status-box {
+    width: 100%;
+    height: 14%;
+    /* background: red; */
+    margin-top: 3%;
+}
+
+
+.pet-status-name {
+    color: white;
+    margin-left: 8%;
+    margin-bottom: 1%;
+}
+.pet-status-bar {
+    width: 0%;
+    height: 14%;
+    max-width: 87%;
+    background: #081014;
+    border-radius: 7px;
+    margin-left: 2%;
+    border-radius: 0px 15px 15px 0px;
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+}
+
+
+.pet-buybox {
+    width: 12%;
+    height: 7%;
+    font-size: 2vh;
+    color: white;
+    transition: 1s all;
+    background-color: #cacaca49;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    position: absolute;
+    margin: 82vh;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 900;
+    font-style: italic;
+    padding: 9px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.pet-buybox:hover {
+    color: black;
+    box-shadow: #99fb22 8px -2px 14px;
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+}
+
+
+
+/* interection Side */
+
+#pet-interaction {
+    background-image: url(./img/bg-status.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 32vh;
+    height: 67vh;
+    position: absolute;
+    right: 3%;
+    overflow: hidden;
+    /* display: none; */
+    
+
+}
+
+.pet-interaction-petimg {
+    width: 13vh;
+    height: 19%;
+    background-image: url(./img/doghead22.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 8vh 9vh;
+}
+
+
+.pet-interaction-petimg:hover {
+    scale: 1.2;
+    border: 1px solid rgba(255, 255, 255, 0.705);
+}
+
+
+
+#pet-interaction-name {
+    width: 96%;
+    height: 6%;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3vh;
+    margin-top: 68%;
+    background: transparent;
+    border: none;
+    /* border-bottom: 1px solid white; */
+    margin-bottom: 2%;
+    text-align: center;
+    color: white;
+    outline: none;
+}
+
+#pet-interaction-name::placeholder {
+    color: white;
+}
+
+#pet-interaction-text-save {
+    width: 20%;
+    text-align: center;
+    height: 3%;
+    float: unset;
+    margin: 0 auto;
+    color: black;
+    padding: 2px;
+    background-color: #99fb22;
+    font-weight: 800;
+}
+
+.pet-interaction-gender {
+    width: 11%;
+    height: 8%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./img/M.png);
+    top: 22%;
+    left: 77%;
+    position: absolute;
+}
+
+.pet-interaction-level {
+    width: 98%;
+    height: 6%;
+    text-align: center;
+    font-style: italic;
+}
+
+
+.pet-interaction-clickstatus {
+    display: flex;
+    width: 98%;
+    height: 5%;
+}
+
+.pet-interaction-clickbar {
+    margin-left: 17%;
+    width: 24%;
+    height: 66%;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.pet-interaction-bottom{
+    width: 98%;
+    height: 46%;
+}
+
+
+#pet-interaction-status {
+    width: 100%;
+    transition: .1s all;
+    height: 18%;
+}
+
+
+.pet-interaction-statusbox {
+    width: 15%;
+    height: 14%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.pet-interaction-status-icon{
+    /* background-image: url(./img/hearth.png); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 27px 28px;
+    height: 50%;
+    width: 77%;
+}
+
+.pet-interaction-status-bar{
+    /* width: 74%; */
+    height: 14%;
+    background: red;
+    margin-top: 3%;
+    max-width: 85%;
+}
+
+
+/*  Order => */
+
+#pet-interaction-order {
+    width: 100%;
+    height: 100%;
+    transition: .1s all;
+    overflow-y: scroll;
+    height: 87%;
+}
+
+#pet-interaction-order::-webkit-scrollbar {
+    position: absolute;
+    width: 0vh;
+}
+
+#pet-interaction-order::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#pet-interaction-order::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.664);
+
+}
+
+
+.pet-interaction-order-box {
+    width: 70%;
+    margin: 0 auto;
+    height: 15%;
+    margin-top: 1%;
+    border: 1px solid #ffffff7a;
+    border-radius: 5px;
+    background-color: #30303075;
+    padding: 11px;
+}
+
+.pet-interaction-orders-label {
+    float: left;
+    width: 51%;
+    font-weight: 400;
+    margin-right: 25%;
+    font-style: italic;
+    font-size: 1.2vh;
+}
+
+.pet-interaction-orders-level {
+    opacity: 0.52;
+    font-size: 1.2vh;
+}
+
+
+.pet-interaction-order-box:hover {
+    opacity: 0.6;
+}
+
+
+
+.pet-interaction-clickbar:hover {
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    box-shadow: #99fb22 8px -2px 14px;
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+}
+
+#pet-input-area-text {
+    width: 74%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 2%;
+    text-align: center;
+    color: white;
+    outline: none;
+    font-style: italic;
+}
+
+.pet-input-area-btns{
+    width: 100%;
+    display: flex;
+    height: 38%;
+}
+
+.pet-input-area-btn {
+    margin-left: 16%;
+    margin-top: 4%;
+    background: #b7b7b729;
+    width: 26%;
+    height: 40%;
+    border-radius: 5px;
+    padding: 2px;
+    transition: 1s all;
+}
+
+#confirm:hover {
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    box-shadow: #99fb22 8px -2px 14px;
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, rgb(154,255,34) 98%);
+}
+#decline:hover {
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    box-shadow: #fb2922 8px -2px 14px;
+    background-image: -moz-linear-gradient( 53deg, rgb(198,255,34) 3%, #fb2922 98%);
+    background-image: -webkit-linear-gradient( 53deg, rgb(198,255,34) 3%, #fb2922 98%);
+}
+
+
+
+
+
+/* INPUT */
+
+#pet-input-area{
+    height: 14%;
+    width: 21%;
+    border-radius: 15px;
+    background: #02030ede;
+    text-align: center;
+}
+
+.pet-input-area-header {
+    width: 100%;
+    height: 20%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    font-weight: 200;
+    font-style: oblique;
+}
+
+
+circle {
+    /* display: flex; */
+    /* position: absolute; */
+}
+
+
+.progress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  .progressplayer {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  .backgroundCircle {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+
+  .circle-icon {
+      font-size: 1.5vh;
+      color: white;
+  }
+
+  @keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 #BF360C;
+	}
+	50% {
+		box-shadow: 0 0 0 5px #bf360cb9;
+	}
+	100% {
+		box-shadow: 0 0 0 0 #bf360c85;
+	}
+}
+
+
+/* level up notify */
+.levelup-notify{
+    background: radial-gradient(circle, rgb(154,255,34)   0%, rgba(0,0,0,0) 57%);
+    width: 54%;
+    height: 65%;
+    text-align: center;
+    padding: 79px;
+    top:105vh;
+    position: absolute;
+    color: white;
+    margin: 0vh 20%;
+}
+
+
+.levelup-headerside{
+    font-family: 'Montserrat';
+    margin-bottom: 7%;
+    height: 10%;
+    transition: 1s all;
+
+}
+
+.levelup-headerside-text {
+    margin: 0;
+    width: 17%;
+    font-size: 1.5vh;
+    float: inline-start;
+    margin-left: 34%;
+    margin-right: -22%;
+}
+
+
+.levelup-headerside-level {
+    font-weight: bolder;
+    font-size: 7vh;
+    width: 8%;
+    text-align: left;
+    height: 16%;
+    margin: 0 auto;
+}
+
+
